@@ -33,4 +33,4 @@ def create_slug(title: str, media_path: str, username: str, date: str) -> str:
 	m.update(username.encode())
 	m.update(date.encode())
 
-    return m.hexdigest()[:10]
+	return m.hexdigest()[:10]
