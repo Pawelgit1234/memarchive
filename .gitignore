@@ -1,6 +1,6 @@
 # My files and directories
-memarchive/media
-memarchive/db.sqlite3
+*/media
+*/db.sqlite3
 */.env
 
 # Byte-compiled / optimized / DLL files
