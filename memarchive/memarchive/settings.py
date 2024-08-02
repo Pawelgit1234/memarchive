@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # My
     'medias',
     'comments',
-    'users'
+    'users',
+    'playlists',
 
     # Installed
 

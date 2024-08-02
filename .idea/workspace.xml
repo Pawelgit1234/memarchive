@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="comments and comments likes models">
-      <change afterPath="$PROJECT_DIR$/memarchive/comments/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/users/urls.py" afterDir="false" />
+    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="profile">
+      <change afterPath="$PROJECT_DIR$/memarchive/playlists/business.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/playlists/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/medias/business.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/business.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/medias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/urls.py" afterDir="false" />
@@ -39,13 +39,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ellaw/OneDrive/Desktop/python/memarchive"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ellaw/OneDrive/Desktop/python/memarchive&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ellaw\OneDrive\Desktop\python\memarchive\memarchive\media" />
@@ -92,13 +92,22 @@
       <option name="project" value="LOCAL" />
       <updated>1722262167486</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="profile">
+      <option name="closed" value="true" />
+      <created>1722602910246</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722602910246</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="django start" />
     <MESSAGE value="media, view and like model" />
     <MESSAGE value="comments and comments likes models" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments and comments likes models" />
+    <MESSAGE value="profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile" />
   </component>
 </project>

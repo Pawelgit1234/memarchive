@@ -19,7 +19,7 @@ def file_size(value):
 		raise ValidationError(_('File too large. Size should not exceed 10 MB.'))
 
 
-def create_slug(title: str, media_path: str, username: str, date: str) -> str:
+def create_media_slug(title: str, media_path: str, username: str, date: str) -> str:
 	m = hashlib.sha256()
 	m.update(title.encode())
 

@@ -8,6 +8,7 @@ urlpatterns = [
     include('medias.urls'),
     include('comments.urls'),
     include('users.urls'),
+    include('playlists.urls'),
 ]
 
 if settings.DEBUG:

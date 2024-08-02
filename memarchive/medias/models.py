@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-from .business import validate_file_extension, file_size, create_slug
+from .business import validate_file_extension, file_size, create_media_slug
 
 
 class Media(models.Model):
@@ -11,6 +11,7 @@ class Media(models.Model):
 	valid_original_extensions = ['.rar', '.zip', '.7z']
 
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='medias', verbose_name='User')
+	is_private = models.BooleanField('Is Private', default=False)
 	title = models.CharField('Title', max_length=100)
 	description = models.TextField('Description', max_length=1000, blank=True)
 	text = models.TextField('Text', max_length=500, blank=True)
@@ -22,9 +23,8 @@ class Media(models.Model):
 	tags = ...
 
 	def save(self, *args, **kwargs):
-		if not self.slug:
-			self.slug = create_slug(self.title, self.media.path, self.user.username, str(self.date))
-		super(Media, self).save(*args, **kwargs)
+		self.slug = create_media_slug(self.title, self.media.path, self.user.username, str(self.date))
+		super().save(*args, **kwargs)
 
 	def __str__(self):
 		return self.title
