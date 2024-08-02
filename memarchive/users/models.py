@@ -7,6 +7,7 @@ class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	avatar = models.ImageField(default='user.png', upload_to='profile_images/%Y/%m/%d')
 	bio = models.TextField(max_length=1000, blank=True)
+	tags = models.ManyToManyField('Tag', related_name='profiles', blank=True)
 
 	def __str__(self):
 		self.user.username

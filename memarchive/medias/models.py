@@ -20,7 +20,7 @@ class Media(models.Model):
 	slug = models.SlugField('Slug', max_length=10, blank=True)
 	timestamp = models.DateTimeField('Timestamp', default=timezone.now, blank=True)
 	downloads_count = models.IntegerField('Downloads count', default=0)
-	tags = ...
+	tags = models.ManyToManyField('Tag', related_name='medias', blank=True)
 
 	def save(self, *args, **kwargs):
 		self.slug = create_media_slug(self.title, self.media.path, self.user.username, str(self.date))

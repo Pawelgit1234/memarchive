@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="profile">
-      <change afterPath="$PROJECT_DIR$/memarchive/playlists/business.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/playlists/urls.py" afterDir="false" />
+    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="playlist">
+      <change afterPath="$PROJECT_DIR$/memarchive/search/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/medias/business.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/business.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/medias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/playlists/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/playlists/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722602910246</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="playlist">
+      <option name="closed" value="true" />
+      <created>1722604539964</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722604539964</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -108,6 +115,7 @@
     <MESSAGE value="media, view and like model" />
     <MESSAGE value="comments and comments likes models" />
     <MESSAGE value="profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile" />
+    <MESSAGE value="playlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="playlist" />
   </component>
 </project>

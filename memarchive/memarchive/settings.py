@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'comments',
     'users',
     'playlists',
+    'search',
 
     # Installed
 

@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-from medias.models import Medias
-from business import create_playlist_slug
+from medias.models import Media
+from .business import create_playlist_slug
 
 
 class Playlist(models.Model):
@@ -13,7 +13,7 @@ class Playlist(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='playlists', verbose_name='User')
 	timestamp = models.DateTimeField('Timestamp', default=timezone.now, blank=True)
 	slug = models.SlugField('Slug', max_length=10, blank=True)
-	medias = models.ManyToManyField(Medias, related_name='playlists', verbose_name='Medias')
+	medias = models.ManyToManyField(Media, related_name='playlists', verbose_name='Medias')
 
 	def save(self, *argc, **kwargs):
 		self.slug = create_playlist_slug(self.title, self.user.username, str(self.timestamp))

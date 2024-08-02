@@ -9,6 +9,7 @@ urlpatterns = [
     include('comments.urls'),
     include('users.urls'),
     include('playlists.urls'),
+    include('search.urls'),
 ]
 
 if settings.DEBUG:
