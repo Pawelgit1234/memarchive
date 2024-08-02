@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-from media.models import Media
+from medias.models import Media
 
 
 class Comment(models.Model):

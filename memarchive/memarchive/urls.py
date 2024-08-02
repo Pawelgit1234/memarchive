@@ -6,6 +6,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     include('medias.urls'),
+    include('comments.urls'),
+    include('users.urls'),
 ]
 
 if settings.DEBUG:

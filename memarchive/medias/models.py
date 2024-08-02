@@ -31,10 +31,10 @@ class Media(models.Model):
 
 	class Meta:
 		verbose_name = "media"
-		verbose_name_plural = "media"
+		verbose_name_plural = "medias"
 
 
-class View(models.Model):
+class MediaView(models.Model):
 	""" If user see a media """
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='views', blank=True, null=True)
 	media = models.ForeignKey(Media, on_delete=models.CASCADE, related_name='views')
@@ -48,7 +48,7 @@ class View(models.Model):
 		verbose_name_plural = "views"
 
 
-class Like(models.Model):
+class MediaLike(models.Model):
 	""" If user like a media """
 	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='likes')
 	media = models.ForeignKey(Media, on_delete=models.CASCADE, related_name='likes')
