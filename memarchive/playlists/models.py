@@ -22,6 +22,11 @@ class Playlist(models.Model):
 	def __str__(self):
 		return self.title
 
+	def media_count(self):
+		return self.medias.count()
+
+	media_count.short_description = 'Media Count'
+
 	class Meta:
 		verbose_name = "playlist"
 		verbose_name_plural = "playlists"

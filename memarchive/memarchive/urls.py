@@ -5,11 +5,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    include('medias.urls'),
-    include('comments.urls'),
-    include('users.urls'),
-    include('playlists.urls'),
-    include('search.urls'),
+    path('/', include('medias.urls')),
+    path('comment/', include('comments.urls')),
+    path('profile/', include('users.urls')),
+    path('playlist/', include('playlists.urls')),
+    path('search/', include('search.urls')),
 ]
 
 if settings.DEBUG:

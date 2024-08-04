@@ -32,6 +32,6 @@ class CommentLike(models.Model):
 		return f"{self.user.username} - {self.comment.content[:10]}"
 
 	class Meta:
-		verbose_name = "comment_like"
-		verbose_name_plural = "comment_likes"
+		verbose_name = "comment like"
+		verbose_name_plural = "comment likes"
 		unique_together = ('comment', 'user')
