@@ -13,9 +13,13 @@ class Comment(models.Model):
 	media = models.ForeignKey(Media, on_delete=models.CASCADE, related_name='comments')
 	parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies', verbose_name='Parent Comment')
 	timestamp = models.DateTimeField("Timestamp", default=timezone.now)
+	is_modified = models.BooleanField('Is modified', default=False)
 
 	def __str__(self):
 		return f"{self.user.username} - {self.content[:10]}"
+
+	def get_likes_count(self):
+		return self.comment_likes.count()
 
 	class Meta:
 		verbose_name = "comment"

@@ -27,6 +27,12 @@ class Media(models.Model):
 	def __str__(self):
 		return self.title
 
+	def get_likes_count(self):
+		return self.likes.count()
+
+	def get_views_count(self):
+		return self.views.count()
+
 	class Meta:
 		verbose_name = "media"
 		verbose_name_plural = "medias"

@@ -5,7 +5,7 @@ from .models import Comment, CommentLike
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'short_content', 'media', 'timestamp', 'parent')
+    list_display = ('user', 'short_content', 'media', 'timestamp', 'parent', 'is_modified')
     search_fields = ('content', 'user__username')
     list_filter = ('timestamp',)
 
