@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', include('medias.urls')),
+    path('medias/', include('medias.urls')),
     path('comment/', include('comments.urls')),
     path('profile/', include('users.urls')),
     path('playlist/', include('playlists.urls')),

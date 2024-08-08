@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="admins, models bugfix">
-      <change afterPath="$PROJECT_DIR$/memarchive/comments/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/medias/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/playlists/serializers.py" afterDir="false" />
+    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/comments/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/medias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/medias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/medias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/memarchive/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/memarchive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/playlists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/playlists/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/playlists/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/playlists/views.py" afterDir="false" />
     </list>
@@ -46,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ellaw/OneDrive/Desktop/python/memarchive/memarchive/search"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ellaw/OneDrive/Desktop/python/memarchive&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ellaw\OneDrive\Desktop\python\memarchive\memarchive\search" />
@@ -134,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722778345965</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="drf">
+      <option name="closed" value="true" />
+      <created>1722948508404</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722948508404</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +147,7 @@
     <MESSAGE value="playlist" />
     <MESSAGE value="tags" />
     <MESSAGE value="admins, models bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="admins, models bugfix" />
+    <MESSAGE value="drf" />
+    <option name="LAST_COMMIT_MESSAGE" value="drf" />
   </component>
 </project>

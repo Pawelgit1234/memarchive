@@ -1,44 +1,35 @@
-from django.http import JsonResponse, HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-
-from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.exceptions import NotFound
 
 from .models import Playlist
 from .serializers import PlaylistSerializer
 
-@csrf_exempt
-def playlist_list(request):
-	""" List all playlists, or create a new playlist """
-	if request.method == 'GET':
-		playlists = Playlist.objects.all()
-		serializer = PlaylistSerializer(playlists, many=True)
-		return JsonResponse(serializer.data, safe=False)
-	elif request.method == 'POST':
-		data = JSONParser().parse(request)
-		serializer = PlaylistSerializer(data=data)
-		if serializer.is_valid():
-			serializer.save()
-			return JsonResponse(serializer.data, status=201)
-		return JsonResponse(serializer.errors, status=400)
 
-@csrf_exempt
-def playlist_detail(request, pk):
-	""" Retrieve, update or delete a playlist """
-	try:
-		playlist = Playlist.objects.get(pk=pk)
-	except Playlist.DoesNotExist:
-		return HttpResponse(status=404)
+class PlaylistListView(ListCreateAPIView):
+    """List all playlists with pagination, or create a new playlist."""
+    queryset = Playlist.objects.all()
+    serializer_class = PlaylistSerializer
 
-	if request.method == 'GET':
-		serializer = PlaylistSerializer(playlist)
-		return JsonResponse(serializer.data)
-	elif request.method == 'PUT':
-		data = JSONParser().parse(request)
-		serializer = PlaylistSerializer(playlist, data=data, partial=True)
-		if serializer.is_valid():
-			serializer.save()
-			return JsonResponse(serializer.data)
-		return JsonResponse(serializer.errors, status=400)
-	elif request.method == 'DELETE':
-		playlist.delete()
-		return HttpResponse(status=204)
+    def create(self, request, *args, **kwargs):
+        serializer = PlaylistSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PlaylistDetailView(RetrieveUpdateDestroyAPIView):
+    """Retrieve, update or delete a playlist."""
+    queryset = Playlist.objects.all()
+    serializer_class = PlaylistSerializer
+
+    def get_object(self):
+        try:
+            return super().get_object()
+        except Playlist.DoesNotExist:
+            raise NotFound()
+
+    def put(self, request, *args, **kwargs):
+        return self.partial_update(request, *args, **kwargs)

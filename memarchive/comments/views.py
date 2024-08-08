@@ -1,71 +1,55 @@
-from django.http import JsonResponse, HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-
-from rest_framework.parsers import JSONParser
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.generics import ListAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.exceptions import NotFound
 
 from .models import Comment, CommentLike
 from .serializers import CommentSerializer, CommentLikeSerializer
 
 
-@csrf_exempt
-def comment_list(request):
-	""" List of all comments, or create new comment """
-	if request.method == 'GET':
-		comments = Comment.objects.all()
-		serializer = CommentSerializer(comments, many=True)
-		return JsonResponse(serializer.data, safe=False)
-	elif request.method == 'POST':
-		data = JSONParser().parse(request)
-		serializer = CommentSerializer(data=data)
-		if serializer.is_valid():
-			serializer.save()
-			return JsonResponse(serializer.data, status=201)
-		return JsonResponse(serializer.errors, status=400)
+class CommentListView(ListAPIView):
+    """ List all comments with pagination, or create a new comment """
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+    def post(self, request, *args, **kwargs):
+        serializer = CommentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@csrf_exempt
-def comment_detail(request, pk):
-	""" Retrieve, update or delete a comment """
-	try:
-		comment = Comment.objects.get(pk=pk)
-	except Comment.DoesNotExist:
-		return HttpResponse(status=404)
-
-	if request.method == 'GET':
-		serializer = CommentSerializer(comment)
-		return JsonResponse(serializer.data)
-	elif request.method == 'PUT':
-		data = JSONParser().parse(request)
-		serializer = CommentSerializer(comment, data=data)
-		if serializer.is_valid():
-			serializer.save()
-			return JsonResponse(serializer.data)
-		return JsonResponse(serializer.errors, status=400)
-	elif request.method == 'DELETE':
-		comment.delete()
-		return HttpResponse(status=204)
+class CommentDetailView(RetrieveUpdateDestroyAPIView):
+    """ Retrieve, update or delete a comment """
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
 
 
-@csrf_exempt
-def comment_like(request, pk):
-	""" Like or unlike a comment """
-	try:
-		comment = Comment.objects.get(pk=pk)
-	except Comment.DoesNotExist:
-		return HttpResponse(status=404)
+class CommentLikeView(ListAPIView):
+    """ Like or unlike a comment """
+    def get_object(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+        except Comment.DoesNotExist:
+            raise NotFound()
 
-	if request.method == 'POST':
-		data = JSONParser().parse(request)
-		data['comment'] = comment.id
-		serializer = CommentLikeSerializer(data=data)
-		if serializer.is_valid():
-			serializer.save()
-			return JsonResponse(serializer.data, status=201)
-		return JsonResponse(serializer.errors, status=400)
-	elif request.method == 'DELETE':
-		try:
-			like = CommentLike.objects.get(comment=comment, user=request.user)
-			like.delete()
-			return HttpResponse(status=204)
-		except CommentLike.DoesNotExist:
-			return HttpResponse(status=404)
+    def post(self, request, pk, *args, **kwargs):
+        comment = self.get_object(pk)
+        data = request.data
+        data['comment'] = comment.id
+        data['user'] = request.user.id
+        serializer = CommentLikeSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, *args, **kwargs):
+        comment = self.get_object(pk)
+        try:
+            like = CommentLike.objects.get(comment=comment, user=request.user)
+            like.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except CommentLike.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)

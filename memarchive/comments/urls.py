@@ -3,9 +3,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-	path('comments/', views.comment_list, name='comment_list'),
-	path('comments/<int:pk>/', views.comment_detail, name='comment_detail'),
-	path('comments/<int:pk>/like/', views.comment_like, name='comment_like'),
+	path('', views.CommentListView.as_view(), name='comment_list'),
+	path('<int:pk>/', views.CommentDetailView.as_view(), name='comment_detail'),
+	path('<int:pk>/like/', views.CommentLikeView.as_view(), name='comment_like'),
 ]
 
 
