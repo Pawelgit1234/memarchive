@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="bugfix">
+    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="home">
+      <change afterPath="$PROJECT_DIR$/memarchive/core/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/static/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/static/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/templates/core/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/templates/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/templates/sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/memarchive/templates/tags.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/comments/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/medias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/medias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/medias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/memarchive/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/playlists/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/playlists/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/playlists/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/playlists/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,6 +47,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ellaw/OneDrive/Desktop/python/memarchive&quot;
@@ -136,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722948508404</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="drf + pagination">
+      <option name="closed" value="true" />
+      <created>1723119661873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723119661874</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +162,7 @@
     <MESSAGE value="tags" />
     <MESSAGE value="admins, models bugfix" />
     <MESSAGE value="drf" />
-    <option name="LAST_COMMIT_MESSAGE" value="drf" />
+    <MESSAGE value="drf + pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="drf + pagination" />
   </component>
 </project>

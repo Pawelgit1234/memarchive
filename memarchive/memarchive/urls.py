@@ -6,10 +6,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('medias/', include('medias.urls')),
-    path('comment/', include('comments.urls')),
-    path('profile/', include('users.urls')),
-    path('playlist/', include('playlists.urls')),
+    path('comments/', include('comments.urls')),
+    path('profiles/', include('users.urls')),
+    path('playlists/', include('playlists.urls')),
     path('search/', include('search.urls')),
+    path('', include('core.urls')),
 ]
 
 if settings.DEBUG:

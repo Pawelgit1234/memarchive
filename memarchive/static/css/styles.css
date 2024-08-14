@@ -1,0 +1,9 @@
+.no-underline {
+    color: black;
+    text-decoration: none;
+}
+
+.no-underline:hover {
+    color: #2b2b2b;
+    text-decoration: none;
+}
