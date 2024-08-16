@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="home">
-      <change afterPath="$PROJECT_DIR$/memarchive/core/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/static/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/static/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/templates/core/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/templates/navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/templates/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memarchive/templates/tags.html" afterDir="false" />
+    <list default="true" id="79603051-40c8-4da8-901a-6195725a863b" name="Changes" comment="basic home look">
+      <change afterPath="$PROJECT_DIR$/memarchive/static/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/memarchive/memarchive/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memarchive/memarchive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/memarchive/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/static/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memarchive/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/memarchive/templates/core/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723119661874</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="basic home look">
+      <option name="closed" value="true" />
+      <created>1723645802839</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723645802839</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -163,6 +166,7 @@
     <MESSAGE value="admins, models bugfix" />
     <MESSAGE value="drf" />
     <MESSAGE value="drf + pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="drf + pagination" />
+    <MESSAGE value="basic home look" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic home look" />
   </component>
 </project>
