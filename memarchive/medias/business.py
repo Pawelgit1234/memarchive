@@ -14,7 +14,7 @@ def validate_file_extension(value, valid_extensions):
 
 
 def media_file_validator(value):
-	valid_extensions = ['.mp4', '.mp3', '.jpg', '.png', '.gif']
+	valid_extensions = ['.mp4', '.mp3', '.wav', '.jpg', '.png', '.gif']
 	validate_file_extension(value, valid_extensions)
 
 

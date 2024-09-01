@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
+{% endblock %}
+
+{% block js %}
+<script src="https://unpkg.com/wavesurfer.js@7"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+<script src="{% static 'js/media.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
