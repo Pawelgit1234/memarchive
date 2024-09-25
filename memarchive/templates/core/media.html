@@ -7,10 +7,58 @@
 
 {% block js %}
 <script src="https://unpkg.com/wavesurfer.js@7"></script>
-<script src="{% static 'js/scripts.js' %}"></script>
 <script src="{% static 'js/media.js' %}"></script>
 {% endblock %}
 
 {% block content %}
+<div class="media-view content">
+    <img src="{{ media.media.url }}" alt="No Media">
+    <h3>{{ media.title }}</h3>
+    <div class="media-info">
+        <h4 class="d-inline-flex align-items-center">
+            <img src="{{ media.user.profile.avatar.url }}" alt="avatar" class="avatar me-2">
+            {{ media.user.username }}
+        </h4>
+        <div class="button-group ms-3">
+            <button type="button" class="btn custom-btn d-inline-flex align-items-center" onclick="handleFollowing()">
+                <img src="{% if user_following %}{% static 'img/follow_full.png' %}{% else %}{% static 'img/follow_empty.png' %}{% endif %}" class="me-2 icon-small" id="follow">
+                <span class="mx-2">|</span>
+                <span class="followers-count">{{ media.user.profile.get_followers_count }}</span>
+            </button>
+            <button type="button" class="btn custom-btn d-inline-flex align-items-center" onclick="handleLiking()">
+                <img src="{% if user_liked %}{% static 'img/star_full.png' %}{% else %}{% static 'img/star_empty.png' %}{% endif %}" class="me-2 icon-small" id="like">
+                <span class="likes-count">{{ media.get_likes_count }}</span>
+            </button>
+            <button type="button" class="btn custom-btn d-inline-flex align-items-center">
+                <img src="{% static 'img/download.png' %}" class="me-2 icon-small">
+                <span class="mx-2">|</span>
+                <span>Download</span>
+            </button>
+            <button type="button" class="btn custom-btn d-inline-flex align-items-center">
+                <img src="{% static 'img/download_original.png' %}" class="me-2 icon-small">
+                <span class="mx-2">|</span>
+                <span>Download original</span>
+            </button>
+            <div class="icon-view">
+                <span><img src="{% static 'img/view.png' %}" class="me-2 icon-small"> <b>{{ media.get_views_count }}</b></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="medias">
+    <!-- Medias on the right side -->
+</div>
 
+<script>
+    const like_url = '{% url 'media_like' media.id %}';
+    const star_empty = '{% static 'img/star_empty.png' %}';
+    const star_full = '{% static 'img/star_full.png' %}';
+    const user_id = '{{ user.id }}';
+    let user_liked = '{{ user_liked }}' === 'True';
+
+    const follow_url = '{% url 'profile_follow' media.user.profile.id %}';
+    const follow_empty = '{% static 'img/follow_empty.png' %}';
+    const follow_full = '{% static 'img/follow_full.png' %}';
+    let user_following = '{{ user_following }}' === 'True';
+</script>
 {% endblock %}

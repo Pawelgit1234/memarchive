@@ -49,7 +49,7 @@ function addMedias(data) {
                     ${mediaElement}
                 </a>
                 <div class="card-body d-flex align-items-start">
-                    <img src="${media.avatar_url}" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                    <img src="${media.avatar_url}" class="avatar" style="margin-right: 10px;">
                     <div>
                         <p class="card-text mb-0"><b>${title}</b></p>
                         <p class="card-text text-muted" style="font-size: 12px;">${media.username}</p>

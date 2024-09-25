@@ -1,0 +1,36 @@
+.media-view img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.button-group {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.custom-btn {
+    background-color: #dedede!important;
+    border: 1px solid #dedede !important;
+    border-radius: 20px !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 8px 15px;
+    font-size: 14px !important;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-btn:hover {
+    background-color: #bababa !important;
+    border-color: #bababa !important;
+}

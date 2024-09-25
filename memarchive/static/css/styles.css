@@ -77,3 +77,29 @@
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 3px;
 }
+
+.content {
+    margin-left: 230px;
+    margin-top: 80px;
+}
+
+.avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+
+.icon-small {
+    width: 25px !important;
+    height: auto;
+}
+
+.icon-view {
+        align-items: center;
+}
+
+.icon-view img {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
